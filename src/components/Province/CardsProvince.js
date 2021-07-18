@@ -7,25 +7,25 @@ const CardsProvince = ({data: {kasus, sembuh, dirawat, meninggal}}) => {
     const card = [
         {
             id: 1,
-            color: "red",
+            color: "bg-red-300",
             value: kasus,
             label: "Kasus Positif",
         },
         {
             id: 2,
-            color: "green",
+            color: "bg-green-300",
             value: sembuh,
             label: "Sembuh",
         },
         {
             id: 3,
-            color: "gray",
+            color: "bg-gray-300",
             value: meninggal,
             label: "Meninggal",
         },
         {
             id: 4,
-            color: "yellow",
+            color: "bg-yellow-300",
             value: dirawat,
             label: "kasus aktif",
         }
@@ -36,7 +36,7 @@ const CardsProvince = ({data: {kasus, sembuh, dirawat, meninggal}}) => {
             <div className="grid grid-rows-4 md:grid-rows-1 mx-2 md:grid-cols-4 gap-4 md:justify-center">
                 {
                     card.map(({color, label, value, id}) => (
-                        <div key={id} className={`container rounded-md bg-${color}-300 shadow-lg`}>
+                        <div key={id} className={`container rounded-md ${color} shadow-lg`}>
                             <div className="flex flex-col p-6 px-3">
                                 <div className="text-3xl font-lg">{
                                 value ? 
