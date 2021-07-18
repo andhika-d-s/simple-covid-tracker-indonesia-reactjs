@@ -23,28 +23,28 @@ const Cards = () => {
     const card = [
         {
             id: 1,
-            color: "red",
+            color: "bg-red-300",
             value: dataIndonesia.data.positif,
             label: "Kasus Positif",
             date: new Date(dataIndonesia.data.lastUpdate).toDateString()
         },
         {
             id: 2,
-            color: "green",
+            color: "bg-green-300",
             value: dataIndonesia.data.sembuh,
             label: "Sembuh",
             date: new Date(dataIndonesia.data.lastUpdate).toDateString()
         },
         {
             id: 3,
-            color: "gray",
+            color: "bg-gray-300",
             value: dataIndonesia.data.meninggal,
             label: "Meninggal",
             date: new Date(dataIndonesia.data.lastUpdate).toDateString()
         },
         {
             id: 4,
-            color: "yellow",
+            color: "bg-yellow-300",
             value: dataIndonesia.data.dirawat,
             label: "kasus aktif",
             date: new Date(dataIndonesia.data.lastUpdate).toDateString()
@@ -57,7 +57,7 @@ const Cards = () => {
         <div className="grid grid-rows-4 md:grid-rows-1 mx-2 md:grid-cols-4 gap-4 md:justify-center">
             {
                 card.map(({color, label, value, id, date}) => (
-                    <div key={id} className={`container rounded-md bg-${color}-300 shadow-lg`}>
+                    <div key={id} className={`container rounded-md ${color} shadow-lg`}>
                         <div className="flex flex-col p-6 px-3">
                             <div className="text-3xl font-lg">{
                             value ? 
