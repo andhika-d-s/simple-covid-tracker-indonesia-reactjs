@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <Main title="Data Kasus Covid-19 di Indonesia dan Provinsi Indonesia" subtitle="Positif, Sembuh, Meninggal, dan Kasus Aktif" /> 
+      <p>Hello</p>
     </div>
   );
 }
